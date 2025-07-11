@@ -5,7 +5,7 @@ A responsive, modern web application for collecting and viewing medical survey d
 ## 🔗 Live Demo
 
 👉 [Try the Survey Now](https://shavieb.github.io/Medical-Survey-App)
-
+👉 [View Admin Dashboard](https://shavieb.github.io/Medical-Survey-App/dashboard.html)
 
 ---
 
