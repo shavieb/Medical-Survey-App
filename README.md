@@ -17,7 +17,7 @@ A responsive, modern web application for collecting and viewing medical survey d
 
 ## 📋 Features
 
-- ✅ 10-question medical survey with branching logic
+- ✅ Multi-question medical survey with branching logic
 - 📱 Mobile-friendly, clean interface
 - 🔥 Firebase Firestore integration
 - 📊 Admin dashboard to view all submissions
