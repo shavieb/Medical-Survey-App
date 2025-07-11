@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="downloadCsvBtn">⬇️ Download CSV</button>
+    <h1>Survey Results Dashboard</h1>
+    <table id="resultsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Has Symptoms</th>
+          <th>Symptoms</th>
+          <th>Duration</th>
+          <th>Submitted At</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

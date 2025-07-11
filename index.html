@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Survey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Medical Survey</h1>
+    <form id="surveyForm">
+      <label>Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <div id="question1" class="question">
+        <label>Are you experiencing any symptoms?</label>
+        <select onchange="handleBranch(this.value)">
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <div id="question2" class="question hidden">
+        <label>Which symptoms?</label>
+        <input type="text" name="symptoms" placeholder="e.g. Fever, Cough" />
+      </div>
+
+      <div id="question3" class="question hidden">
+        <label>How long have you had these symptoms?</label>
+        <select name="duration">
+          <option value="">Select</option>
+          <option value="<3 days">Less than 3 days</option>
+          <option value=">3 days">More than 3 days</option>
+        </select>
+      </div>
+
+      <div id="submitSection" class="question hidden">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div id="thankYouMessage" class="hidden">Thanks for submitting the survey!</div>
+  </div>
+
+  <script src="script.js"></script>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<!-- Your Firebase Config -->
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCWh6KisG36H-yH8N4F6KN6YlPQQOdOh1A",
+    authDomain: "medical-survey-app-33f1f.firebaseapp.com",
+    projectId: "medical-survey-app-33f1f",
+    storageBucket: "medical-survey-app-33f1f.firebasestorage.app",
+    messagingSenderId: "686784719159",
+    appId: "1:686784719159:web:e86dcaeb1f3f3d5be392b2"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+
+</body>
+</html>
